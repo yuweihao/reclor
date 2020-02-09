@@ -1,0 +1,141 @@
+---
+layout: default
+---
+
+<div class="header-container jumbotron">
+    <div class="container">
+        <h2 style="color:white"><span class="reclor">ReClor</span>: A Reading Comprehension Dataset Requiring Logical Reasoning</h2>
+        <!--<p>Simple and modern design for publishing blog posts, documentation and many more things about your project.
+          You can now clone and start to create a website for your project like this one.</p>-->
+        <br>
+        <p><a class="btn btn-primary btn-lg" href="{{ "https://openreview.net/pdf?id=HJgJtT4tvB" | relative_url }}" role="button" target="_blank" rel="external">ICLR 2020 paper</a></p>
+    </div>
+</div>
+<div class="container">
+    <h4 class="header-light regular-pad">About <span class="reclor">ReClor</span></h4>
+    <p style="font-size: 16px;">
+        Logical reasoning is an important ability to <cite>examine, analyze, and critically evaluate arguments as they occur in ordinary language</cite> as the definition from LSAC.
+        ReClor is a dataset extracted from logical reasoning questions of standardized graduate admission examinations. 
+        Empirical results show that the state-of-the-art models struggle on ReClor with poor performance indicating more research is needed to essentially enhance the logical reasoning ability of current models.
+        We hope this dataset could help push Machine Reading Comprehension (MRC) towards more complicated reasoning.
+    </p>
+    <hr>
+
+    <h4 class="header-light regular-pad">Example</h4>
+    <blockquote>
+        <strong >Context:</strong><br>
+        In jurisdictions where use of headlights is optional when visibility is good, 
+        drivers who use headlights at all times are less likely to be involved 
+        in a collision than are drivers who use headlights only when visibility is poor. 
+        Yet Highway Safety Department records show that making use of headlights mandatory at all 
+        times does nothing to reduce the overall number of collisions.<br>
+        <strong>Question: </strong>Which one of the following, if true, most helps to resolve the apparent discrepancy in the information above?<br>
+        <strong>Options:</strong><br>
+        A. In jurisdictions where use of headlights is optional when visibility is good, one driver in four uses headlights for daytime driving in good weather.<br>
+        B. Only very careful drivers use headlights when their use is not legally required.<br>
+        C. The jurisdictions where use of headlights is mandatory at all times are those where daytime visibility is frequently poor.<br>
+        D. A law making use of headlights mandatory at all times is not especially difficult to enforce.<br>
+        <strong>Answer: </strong>B
+    </blockquote>
+    This example is modified from <a href="https://www.lsac.org/lsat/taking-lsat/test-format/logical-reasoning/logical-reasoning-sample-questions" target="_blank" rel="external">here</a>.
+    <hr>
+
+    <a id="download"></a>
+    <h4 class="header-light regular-pad">Download</h4>
+    <blockquote>
+    <strong>Items</strong>
+    <ol type="1" style="font-size: 16px;">
+        <li>ReClor dataset is available for non-commercial research purpose use only.</li>
+
+        <li>All passages are obtained from websites/books which is not the property of National University of Singapore. We are not responsible for the content nor the meaning of these passages.</li>
+
+        <li>We shuffle the order of answer options and randomly delete one of the wrong options for each dataset point to comply with fair use of law.</li>
+        
+        <li>You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any commercial purpose, any portion of the contexts and any portion of derived data.</li>
+        
+        <li>We reserve the right to terminate your access to the ReClor dataset at any time.</li>
+    </ol>
+    </blockquote>
+    <br>
+    <p style="font-size: 16px;">
+        If you agree the above items, please use this <a href="https://docs.google.com/forms/d/e/1FAIpQLSe56wq5xIEGbDsgRN6P6lHr34jfv182AMuiIzjJXmVYCg39oA/viewform"
+        target="_blank" rel="external">Google form link</a> to submit your personal informaiton and download the dataset.
+    </p>
+
+    <hr>
+    <h4 class="header-light regular-pad">Code</h4>
+    <p style="font-size: 16px;">This <a href="https://github.com/yuweihao/reclor" target="_blank" rel="external">GitHub repository</a> as an example to show how to load the dataset and generate predicted results of testing set that can submitted to the leaderboard.</p>
+    <hr>
+    <h4 class="header-light regular-pad">Leaderboard</h4> 
+    <a href="https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347" target="_blank" rel="external"><img  class="center-block" styles="border-radius:0.4em;" width="150px" src="{{ "/assets/img/evalai-logo.png" | relative_url }}" alt="nus logo"></a>
+    <p style="font-size: 16px;">Please submit the predicted results of testing set of your model to this <a href="https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347" target="_blank" rel="external">EvalAI leaderboard</a> to see the accuracy.</p>
+    <hr>
+
+    <a id="citation"></a>
+    <h4 class="header-light regular-pad">Citation</h4>
+    <p style="font-size: 16px;">If the paper inspires you, please cite us:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{yu2020reclor,
+        author = {Yu, Weihao and Jiang, Zihang and Dong, Yanfei and Feng, Jiashi},
+        title = {ReClor: A Reading Comprehension Dataset Requiring Logical Reasoning},
+        booktitle = {International Conference on Learning Representations (ICLR)},
+        month = {April},
+        year = {2020}
+    }</code></pre></div></div>
+
+    <hr>
+    <a id="authors"></a>
+    <h4 class="header-light regular-pad">Authors</h4>
+    <div class="row">
+        <div class="col-md-3" style="text-align:center;">
+            <img  class="center-block" styles="border-radius:0.4em ;" src="{{ "/assets/img/yuweihao.jpg" | relative_url }}" >
+            <br />
+            <p style="font-size: 16px;"><a href="http://whyu.me/" target="_blank" rel="external">Weihao Yu</a>*</p>
+        </div>
+
+        <div class="col-md-3" style="text-align:center;">
+            <img  class="center-block"  styles="border-radius:0.4em ;" src="{{ "/assets/img/jiangzihang.jpg" | relative_url }}" >
+            <br />
+            <p style="font-size: 16px;"><a href="https://zihangjiang.github.io/" target="_blank" rel="external">Zihang Jiang</a>*</p>
+        </div>
+
+        <div class="col-md-3" style="text-align:center;">
+            <img  class="center-block" styles="border-radius:0.4em ;"  src="{{ "/assets/img/dongyanfei.jpg" | relative_url }}" >
+            <br />
+            <p style="font-size: 16px;"><a href="https://www.ece.nus.edu.sg/lv/" target="_blank" rel="external">Yanfei Dong</a></p>
+        </div>
+
+        <div class="col-md-3" style="text-align:center;">
+            <img  class="center-block" styles="border-radius:0.4em ;" src="{{ "/assets/img/fengjiashi.jpg" | relative_url }}" >
+            <br />
+            <p style="font-size: 16px;"><a href="https://sites.google.com/site/jshfeng/home" target="_blank" rel="external">Jiashi Feng</a></p>
+        </div>
+    </div>
+    <p style="font-size: 16px;">
+        * equal contribution
+    </p>
+
+    <hr>
+
+    <h4 class="header-light regular-pad">Contact</h4>
+    <p style="font-size: 16px;">
+        If you have any question, please email us.
+    </p>
+
+    <hr>
+
+    <center>
+        <table>
+            <tr>
+            <td>
+            <a href="http://www.nus.edu.sg/" target="_blank" rel="external"><img  class="center-block" styles="border-radius:0.4em;" width="120px" src="{{ "/assets/img/nus_logo.png" | relative_url }}" alt="nus logo"></a>
+            </td>
+            <td>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            </td>
+            <td>
+            <a href="https://www.ece.nus.edu.sg/lv/" target="_blank" rel="external"><img  class="center-block" styles="border-radius:0.4em ;" src="{{ "/assets/img/lvlogo.png" | relative_url }}" alt="lv logo"></a>
+            </td>
+            </tr>
+        </table>
+    </center>
+</div>

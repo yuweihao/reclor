@@ -1,0 +1,61 @@
+[
+
+  
+    
+    
+    {
+      "title": "Welcome",
+      "url": "/reclor/docs/home/"
+    },
+  
+    
+    
+    {
+      "title": "Themes",
+      "url": "/reclor/docs/themes/"
+    },
+  
+    
+    
+    {
+      "title": "Customization",
+      "url": "/reclor/docs/customization/"
+    },
+  
+
+  
+    
+    
+    {
+      "title": "Markdown Cheatsheet",
+      "url": "/reclor/docs/cheatsheet/"
+    },
+  
+    
+    
+    {
+      "title": "Font Awesome Icon List",
+      "url": "/reclor/docs/font-awesome/"
+    },
+  
+    
+    
+    {
+      "title": "Bootstrap Features",
+      "url": "/reclor/docs/bootstrap/"
+    },
+  
+
+
+  
+  {
+  "title": "Jekyll Doc Theme is published!",
+  "url": "/reclor/blog/2017/05/03/jekyll-doc-theme/"
+  },
+  
+  {
+  "title": "Welcome to Jekyll!",
+  "url": "/reclor/blog/2017/02/01/welcome-to-jekyll/"
+  }
+  
+]

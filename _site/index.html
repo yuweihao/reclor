@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/reclor/assets/css/main.css">
+    <link rel="stylesheet" href="/reclor/assets/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/reclor/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>ReClor | A Reading Comprehension Dataset Requiring Logical Reasoning</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="ReClor" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Reading Comprehension Dataset Requiring Logical Reasoning" />
+<meta property="og:description" content="A Reading Comprehension Dataset Requiring Logical Reasoning" />
+<link rel="canonical" href="http://localhost:4000/reclor/" />
+<meta property="og:url" content="http://localhost:4000/reclor/" />
+<meta property="og:site_name" content="ReClor" />
+<script type="application/ld+json">
+{"description":"A Reading Comprehension Dataset Requiring Logical Reasoning","@type":"WebSite","name":"ReClor","url":"http://localhost:4000/reclor/","headline":"ReClor","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="alternate" type="application/rss+xml" title="ReClor" href="http://localhost:4000/reclor/feed.xml" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108848816-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-108848816-1');
+    </script>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/reclor/">
+                <!--<span><img src="/reclor/assets/img/logonav.png" alt="Logo"></span> ReClor-->
+                <span><img src="/reclor/assets/img/logonav.png" alt="Logo"></span> &nbsp;
+                <span class="reclor">ReClor</span>
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <div class="navbar-right">
+            <ul class="nav navbar-nav">
+                <!-- <li ><a href="/reclor/docs/home/">Docs</a></li>
+                <li ><a href="/reclor/blog/2017/05/03/jekyll-doc-theme/">Blog</a></li> -->
+                <li><a href="https://openreview.net/pdf?id=HJgJtT4tvB" target="_blank" rel="external">Paper</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe56wq5xIEGbDsgRN6P6lHr34jfv182AMuiIzjJXmVYCg39oA/viewform" target="_blank" rel="external">Download</a></li>
+                <li><a href="https://github.com/yuweihao/reclor" target="_blank" rel="external">Code</a></li>
+                <li><a href="https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347" target="_blank" rel="external">Leaderboard</a></li>
+                <li><a href="#citation">Citation</a></li>
+                <li><a href="#authors">Authors</a></li>
+            </ul>
+            </div>
+            <!--
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="search" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/yuweihao/reclor"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            -->
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="header-container jumbotron">
+    <div class="container">
+        <h2 style="color:white"><span class="reclor">ReClor</span>: A Reading Comprehension Dataset Requiring Logical Reasoning</h2>
+        <!--<p>Simple and modern design for publishing blog posts, documentation and many more things about your project.
+          You can now clone and start to create a website for your project like this one.</p>-->
+        <br>
+        <p><a class="btn btn-primary btn-lg" href="https://openreview.net/pdf?id=HJgJtT4tvB" role="button" target="_blank" rel="external">ICLR 2020 paper</a></p>
+    </div>
+</div>
+<div class="container">
+    <h4 class="header-light regular-pad">About <span class="reclor">ReClor</span></h4>
+    <p style="font-size: 16px;">
+        Logical reasoning is an important ability to <cite>examine, analyze, and critically evaluate arguments as they occur in ordinary language</cite> as the definition from LSAC.
+        ReClor is a dataset extracted from logical reasoning questions of standardized graduate admission examinations. 
+        Empirical results show that the state-of-the-art models struggle on ReClor with poor performance indicating more research is needed to essentially enhance the logical reasoning ability of current models.
+        We hope this dataset could help push Machine Reading Comprehension (MRC) towards more complicated reasoning.
+    </p>
+    <hr>
+
+    <h4 class="header-light regular-pad">Example</h4>
+    <blockquote>
+        <strong >Context:</strong><br>
+        In jurisdictions where use of headlights is optional when visibility is good, 
+        drivers who use headlights at all times are less likely to be involved 
+        in a collision than are drivers who use headlights only when visibility is poor. 
+        Yet Highway Safety Department records show that making use of headlights mandatory at all 
+        times does nothing to reduce the overall number of collisions.<br>
+        <strong>Question: </strong>Which one of the following, if true, most helps to resolve the apparent discrepancy in the information above?<br>
+        <strong>Options:</strong><br>
+        A. In jurisdictions where use of headlights is optional when visibility is good, one driver in four uses headlights for daytime driving in good weather.<br>
+        B. Only very careful drivers use headlights when their use is not legally required.<br>
+        C. The jurisdictions where use of headlights is mandatory at all times are those where daytime visibility is frequently poor.<br>
+        D. A law making use of headlights mandatory at all times is not especially difficult to enforce.<br>
+        <strong>Answer: </strong>B
+    </blockquote>
+    This example is modified from <a href="https://www.lsac.org/lsat/taking-lsat/test-format/logical-reasoning/logical-reasoning-sample-questions" target="_blank" rel="external">here</a>.
+    <hr>
+
+    <a id="download"></a>
+    <h4 class="header-light regular-pad">Download</h4>
+    <blockquote>
+    <strong>Items</strong>
+    <ol type="1" style="font-size: 16px;">
+        <li>ReClor dataset is available for non-commercial research purpose use only.</li>
+
+        <li>All passages are obtained from websites/books which is not the property of National University of Singapore. We are not responsible for the content nor the meaning of these passages.</li>
+
+        <li>We shuffle the order of answer options and randomly delete one of the wrong options for each dataset point to comply with fair use of law.</li>
+        
+        <li>You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any commercial purpose, any portion of the contexts and any portion of derived data.</li>
+        
+        <li>We reserve the right to terminate your access to the ReClor dataset at any time.</li>
+    </ol>
+    </blockquote>
+    <br>
+    <p style="font-size: 16px;">
+        If you agree the above items, please use this <a href="https://docs.google.com/forms/d/e/1FAIpQLSe56wq5xIEGbDsgRN6P6lHr34jfv182AMuiIzjJXmVYCg39oA/viewform"
+        target="_blank" rel="external">Google form link</a> to submit your personal informaiton and download the dataset.
+    </p>
+
+    <hr>
+    <h4 class="header-light regular-pad">Code</h4>
+    <p style="font-size: 16px;">This <a href="https://github.com/yuweihao/reclor" target="_blank" rel="external">GitHub repository</a> as an example to show how to load the dataset and generate predicted results of testing set that can submitted to the leaderboard.</p>
+    <hr>
+    <h4 class="header-light regular-pad">Leaderboard</h4> 
+    <a href="https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347" target="_blank" rel="external"><img  class="center-block" styles="border-radius:0.4em;" width="150px" src="/reclor/assets/img/evalai-logo.png" alt="nus logo"></a>
+    <p style="font-size: 16px;">Please submit the predicted results of testing set of your model to this <a href="https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347" target="_blank" rel="external">EvalAI leaderboard</a> to see the accuracy.</p>
+    <hr>
+
+    <a id="citation"></a>
+    <h4 class="header-light regular-pad">Citation</h4>
+    <p style="font-size: 16px;">If the paper inspires you, please cite us:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{yu2020reclor,
+        author = {Yu, Weihao and Jiang, Zihang and Dong, Yanfei and Feng, Jiashi},
+        title = {ReClor: A Reading Comprehension Dataset Requiring Logical Reasoning},
+        booktitle = {International Conference on Learning Representations (ICLR)},
+        month = {April},
+        year = {2020}}</code></pre></div></div>
+
+    <hr>
+    <a id="authors"></a>
+    <h4 class="header-light regular-pad">Authors</h4>
+    <div class="row">
+        <div class="col-md-3" style="text-align:center;">
+            <img  class="center-block" styles="border-radius:0.4em ;" src="/reclor/assets/img/yuweihao.jpg" >
+            <br />
+            <p style="font-size: 16px;"><a href="http://whyu.me/" target="_blank" rel="external">Weihao Yu</a>*</p>
+        </div>
+
+        <div class="col-md-3" style="text-align:center;">
+            <img  class="center-block"  styles="border-radius:0.4em ;" src="/reclor/assets/img/jiangzihang.jpg" >
+            <br />
+            <p style="font-size: 16px;"><a href="https://zihangjiang.github.io/" target="_blank" rel="external">Zihang Jiang</a>*</p>
+        </div>
+
+        <div class="col-md-3" style="text-align:center;">
+            <img  class="center-block" styles="border-radius:0.4em ;"  src="/reclor/assets/img/dongyanfei.jpg" >
+            <br />
+            <p style="font-size: 16px;"><a href="https://www.ece.nus.edu.sg/lv/" target="_blank" rel="external">Yanfei Dong</a></p>
+        </div>
+
+        <div class="col-md-3" style="text-align:center;">
+            <img  class="center-block" styles="border-radius:0.4em ;" src="/reclor/assets/img/fengjiashi.jpg" >
+            <br />
+            <p style="font-size: 16px;"><a href="https://sites.google.com/site/jshfeng/home" target="_blank" rel="external">Jiashi Feng</a></p>
+        </div>
+    </div>
+    <p style="font-size: 16px;">
+        * equal contribution
+    </p>
+
+    <hr>
+
+    <h4 class="header-light regular-pad">Contact</h4>
+    <p style="font-size: 16px;">
+        If you have any question, please email us.
+    </p>
+
+    <hr>
+
+    <center>
+        <table>
+            <tr>
+            <td>
+            <a href="http://www.nus.edu.sg/" target="_blank" rel="external"><img  class="center-block" styles="border-radius:0.4em;" width="120px" src="/reclor/assets/img/nus_logo.png" alt="nus logo"></a>
+            </td>
+            <td>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            </td>
+            <td>
+            <a href="https://www.ece.nus.edu.sg/lv/" target="_blank" rel="external"><img  class="center-block" styles="border-radius:0.4em ;" src="/reclor/assets/img/lvlogo.png" alt="lv logo"></a>
+            </td>
+            </tr>
+        </table>
+    </center>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            ReClor 2020 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/reclor'
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/reclor/assets/js/bootstrap.min.js "></script>
+<script src="/reclor/assets/js/typeahead.bundle.min.js "></script>
+
+<script src="/reclor/assets/js/main.js "></script>
+
+</body>
+
+</html>

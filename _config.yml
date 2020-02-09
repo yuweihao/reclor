@@ -1,0 +1,57 @@
+# Site settings
+title: ReClor
+email: weihaoyu6@gmail.com
+description: >
+  A Reading Comprehension Dataset Requiring Logical Reasoning
+lang: en-US
+
+baseurl: "/reclor" # the subpath of your site, e.g. /blog/
+url: https://yuweihao.github.io/reclor # the base hostname & protocol for your site
+git_address: https://github.com/yuweihao/reclor
+git_edit_address: https://github.com/yuweihao/reclor/blob/gh-pages
+
+# theme options from https://bootswatch.com/3/
+# comment out this to use default Bootstrap
+bootwatch: paper # cerulean cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+# Plugins (previously gems:)
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .gitignore
+  - README.md
+timezone: Asia/Singapore
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+    output: true
