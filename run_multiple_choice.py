@@ -274,58 +274,6 @@ def train(args, train_dataset, model, tokenizer):
                     if (
                         args.local_rank == -1 and args.evaluate_during_training
                     ):  # Only evaluate when single GPU otherwise metrics may not average well
-                    # def evaluate_model(train_preds, train_label_ids, tb_writer, args, model, tokenizer):
-                    #     train_preds = np.argmax(train_preds, axis=1)
-                    #     train_acc = simple_accuracy(train_preds, train_label_ids)
-                    #     train_preds = None
-                    #     train_label_ids = None
-                    #     results = evaluate(args, model, tokenizer)
-                    #     logger.info(
-                    #         "train acc: %s, dev acc: %s, loss: %s, global steps: %s",
-                    #         str(train_acc),
-                    #         str(results["eval_acc"]),
-                    #         str(results["eval_loss"]),
-                    #         str(global_step),
-                    #     )
-                    #     tb_writer.add_scalar("training/acc", train_acc, global_step)
-                    #     for key, value in results.items():
-                    #         tb_writer.add_scalar("eval_{}".format(key), value, global_step)
-                    #     if results["eval_acc"] > best_dev_acc:
-                    #         best_dev_acc = results["eval_acc"]
-                    #         best_steps = global_step
-                    #         logger.info("achieve BEST dev acc: %s at global step: %s",
-                    #                     str(best_dev_acc),
-                    #                     str(best_steps)
-                    #         )
-                    #         # if args.do_test:
-                    #         #     results_test = evaluate(args, model, tokenizer, test=True)
-                    #         #     for key, value in results_test.items():
-                    #         #         tb_writer.add_scalar("test_{}".format(key), value, global_step)
-                    #         #     logger.info(
-                    #         #         "test acc: %s, loss: %s, global steps: %s",
-                    #         #         str(results_test["eval_acc"]),
-                    #         #         str(results_test["eval_loss"]),
-                    #         #         str(global_step),
-                    #         #     )
-                    #         # save best dev acc model
-                    #         output_dir = os.path.join(args.output_dir, "checkpoint-best")
-                    #         if not os.path.exists(output_dir):
-                    #             os.makedirs(output_dir)
-                    #         model_to_save = (
-                    #             model.module if hasattr(model, "module") else model
-                    #         )  # Take care of distributed/parallel training
-                    #         model_to_save.save_pretrained(output_dir)
-                    #         tokenizer.save_vocabulary(output_dir)
-                    #         torch.save(args, os.path.join(output_dir, "training_args.bin"))
-                    #         logger.info("Saving model checkpoint to %s", output_dir)
-                    #         txt_dir = os.path.join(output_dir, 'best_dev_results.txt')
-                    #         with open(txt_dir, 'w') as f:
-                    #             rs = 'global_steps: {}; dev_acc: {}'.format(global_step, best_dev_acc)
-                    #             f.write(rs)  
-                    #             tb_writer.add_text('best_results', rs, global_step)
-
-                    #     return train_preds, train_label_ids, train_acc, best_steps
-
                         train_preds, train_label_ids, train_acc, best_steps, best_dev_acc = evaluate_model(train_preds, train_label_ids, tb_writer, args, model, tokenizer, best_steps, best_dev_acc)
                     tb_writer.add_scalar("training/lr", scheduler.get_lr()[0], global_step)
                     tb_writer.add_scalar("training/loss", (tr_loss - logging_loss) / args.logging_steps, global_step)
@@ -338,19 +286,6 @@ def train(args, train_dataset, model, tokenizer):
                     logging_loss = tr_loss
 
                 if args.local_rank in [-1, 0] and args.save_steps > 0 and global_step % args.save_steps == 0:
-                    # Save model checkpoint
-                    # def save_model(args, model, tokenizer):
-                    #     output_dir = os.path.join(args.output_dir, "checkpoint-{}".format(global_step))
-                    #     if not os.path.exists(output_dir):
-                    #         os.makedirs(output_dir)
-                    #     model_to_save = (
-                    #         model.module if hasattr(model, "module") else model
-                    #     )  # Take care of distributed/parallel training
-                    #     model_to_save.save_pretrained(output_dir)
-                    #     tokenizer.save_vocabulary(output_dir)
-                    #     torch.save(args, os.path.join(output_dir, "training_args.bin"))
-                    #     logger.info("Saving model checkpoint to %s", output_dir)
-                    
                     save_model(args, model, tokenizer)
             if args.max_steps > 0 and global_step > args.max_steps:
                 epoch_iterator.close()
