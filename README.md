@@ -7,15 +7,18 @@ This repository contains PyTorch code for the paper: Weihao Yu*, Zihang Jiang*, 
 ```bash
 pip install transformers
 ```
+
 2. Clone the repo by 
 ```bash
 git clone https://github.com/yuweihao/reclor.git
 ```
-3. Get the dataset. Please check out the [project page](http://whyu.me/reclor) to download the dataset and upzip them in the main directory or other directory.
+3. Get the dataset. Please visit this [Google form link](https://docs.google.com/forms/d/e/1FAIpQLSe56wq5xIEGbDsgRN6P6lHr34jfv182AMuiIzjJXmVYCg39oA/viewform) to get the dataset. If you have trouble visiting Google from your area, you can alternatively visit this [Tencent form link](https://wj.qq.com/s2/5406578/f27f/). Then upzip the downloaded file in the main directory or other directory.
+
 4. Run the scripts in the main directory by such as 
 ```bash
 sh scripts/run_roberta_large.sh
 ```
+
 5. (Optional) After running the script, you can find `best_dev_results.txt` in the checkpoint directory which record the best result on validation set, and the predicted file `test_preds.sh` for testing set that you can submit to the [EvalAI leaderboard](https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347) to see the accuracy.
 
 
