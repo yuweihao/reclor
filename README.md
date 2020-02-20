@@ -12,7 +12,7 @@ pip install transformers
 ```bash
 git clone https://github.com/yuweihao/reclor.git
 ```
-3. Get the dataset. Please visit this [Google form link](https://docs.google.com/forms/d/e/1FAIpQLSe56wq5xIEGbDsgRN6P6lHr34jfv182AMuiIzjJXmVYCg39oA/viewform) to get the dataset. If you have trouble visiting Google from your area, you can alternatively visit this [Tencent form link](https://wj.qq.com/s2/5406578/f27f/). Then upzip the downloaded file in the main directory or other directory.
+3. Get the dataset. Please visit this [Google form link](https://docs.google.com/forms/d/e/1FAIpQLSe56wq5xIEGbDsgRN6P6lHr34jfv182AMuiIzjJXmVYCg39oA/viewform) to get the dataset. If you have trouble visiting Google from your area, you can alternatively visit this [Tencent form link](https://wj.qq.com/s2/5472244/fd55/). Then upzip the downloaded file in the main directory or other directory.
 
 4. Run the scripts in the main directory by such as 
 ```bash
