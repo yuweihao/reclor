@@ -2,7 +2,7 @@
 
 This repository contains PyTorch code for the paper: Weihao Yu*, Zihang Jiang*, Yanfei Dong, and Jiashi Feng, [ReClor: A Reading Comprehension Dataset Requiring Logical Reasoning](https://openreview.net/pdf?id=HJgJtT4tvB), ICLR 2020 (* equal contribution). For the data and more information, please check out the [project page](http://whyu.me/reclor). 
 
-# Setting up and using the repo
+## Setting up and using the repo
 1. Set up the environment. Install Python3.5+ and PyTorch 1.0+ and Transformers. I recommend the [Anaconda distribution](https://www.anaconda.com/distribution/) to set up Python environment. Refer to [pytorch.org](https://pytorch.org/) to install PyTorch. Then install [Transformers package](https://github.com/huggingface/transformers) by
 ```bash
 pip install transformers
@@ -22,9 +22,9 @@ sh scripts/run_roberta_large.sh
 5. (Optional) After running the script, you can find `best_dev_results.txt` in the checkpoint directory which record the best result on validation set, and the predicted file `test_preds.sh` for testing set that you can submit to the [EvalAI leaderboard](https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347) to see the accuracy.
 
 
-# Results
+## Results
 
-We obtain the following results with `Ubuntu 16.04, NVIDIA driver 430, PyTorch 1.3.1, cudatoolkit 10.1, numpy 1.17.4, NVIDIA TITAN RTX GPU` (we find the results are different between TITAN RTX and GeForce RTX 2080TI when runing large models).
+We obtain the following results with `Ubuntu 16.04, NVIDIA driver 430, PyTorch 1.3.1, cudatoolkit 10.1, numpy 1.17.4, and NVIDIA TITAN RTX GPU` (we find the results are different between TITAN RTX and GeForce RTX 2080TI when runing large models).
 
 |  Model   | Val  | Test | Test-E | Test-H |
 |  ----  | ----  |  ----  | ----  |  ----  |
@@ -37,7 +37,7 @@ We obtain the following results with `Ubuntu 16.04, NVIDIA driver 430, PyTorch 1
 
 If you could not obtain similar performance in your environment and device, maybe you can try different random seeds.
 
-# Bibtex
+## Bibtex
 
 ```
 @inproceedings{yu2020reclor,
