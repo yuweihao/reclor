@@ -3,10 +3,11 @@
 This repository contains PyTorch code for the paper: Weihao Yu*, Zihang Jiang*, Yanfei Dong, and Jiashi Feng, [ReClor: A Reading Comprehension Dataset Requiring Logical Reasoning](https://openreview.net/pdf?id=HJgJtT4tvB), ICLR 2020 (* equal contribution). For the data and more information, please check out the [project page](http://whyu.me/reclor). 
 
 ## Setting up and using the repo
-1. Set up the environment. Install Python3.5+ and PyTorch 1.0+ and Transformers. I recommend the [Anaconda distribution](https://www.anaconda.com/distribution/) to set up Python environment. Refer to [pytorch.org](https://pytorch.org/) to install PyTorch. Then install [Transformers package](https://github.com/huggingface/transformers) by
+1. Set up the environment. Install Python3.5+, PyTorch 1.0+, [Transformers](https://github.com/huggingface/transformers) and [apex](https://github.com/NVIDIA/apex). I recommend the [Anaconda distribution](https://www.anaconda.com/distribution/) to set up Python environment. Refer to [pytorch.org](https://pytorch.org/) to install PyTorch. Then install [Transformers package](https://github.com/huggingface/transformers) by
 ```bash
 pip install transformers
 ```
+Then refer to [apex](https://github.com/NVIDIA/apex) to install Nvidia apex for mixed precision training.
 
 2. Clone the repo by 
 ```bash
@@ -24,7 +25,7 @@ sh scripts/run_roberta_large.sh
 
 ## Results
 
-We obtain the following results with `Ubuntu 16.04, NVIDIA driver 430, PyTorch 1.3.1, cudatoolkit 10.1, numpy 1.17.4, and NVIDIA TITAN RTX GPU` (we find the results are different between TITAN RTX and GeForce RTX 2080TI when runing large models).
+We obtain the following results with `Ubuntu 16.04, NVIDIA driver 430, PyTorch 1.3.1, cudatoolkit 10.1, numpy 1.17.4, NVIDIA apex, and NVIDIA TITAN RTX GPU` (we find the results are different between TITAN RTX and GeForce RTX 2080TI when runing large models).
 
 |  Model   | Val  | Test | Test-E | Test-H |
 |  ----  | ----  |  ----  | ----  |  ----  |
