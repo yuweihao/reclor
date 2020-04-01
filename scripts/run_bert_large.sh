@@ -2,7 +2,7 @@ export RECLOR_DIR=reclor_data
 export TASK_NAME=reclor
 export MODEL_NAME=bert-large-uncased
 
-CUDA_VISIBLE_DEVICES=1 python run_multiple_choice.py \
+CUDA_VISIBLE_DEVICES=0 python run_multiple_choice.py \
     --model_type bert \
     --model_name_or_path $MODEL_NAME \
     --task_name $TASK_NAME \
