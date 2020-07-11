@@ -5,7 +5,7 @@ This repository contains PyTorch code for the paper: Weihao Yu*, Zihang Jiang*, 
 ## Setting up and using the repo
 1. Set up the environment. Install Python3.5+, PyTorch 1.0+, [Transformers](https://github.com/huggingface/transformers) and [apex](https://github.com/NVIDIA/apex). I recommend the [Anaconda distribution](https://www.anaconda.com/distribution/) to set up Python environment. Refer to [pytorch.org](https://pytorch.org/) to install PyTorch. Then install [Transformers package](https://github.com/huggingface/transformers) by
 ```bash
-pip install transformers
+pip install transformers==2.3.0
 ```
 Then refer to [apex](https://github.com/NVIDIA/apex) to install Nvidia apex for mixed precision training.
 
