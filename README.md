@@ -20,7 +20,7 @@ git clone https://github.com/yuweihao/reclor.git
 sh scripts/run_roberta_large.sh
 ```
 
-5. (Optional) After running the script, you can find `best_dev_results.txt` in the checkpoint directory which record the best result on validation set, and the predicted file `test_preds.npy` for testing set that you can submit to the [EvalAI leaderboard](https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347) to see the accuracy.
+5. (Optional) After running the script, you can find `best_dev_results.txt` in the checkpoint directory which record the best result on validation set, and the predicted file `test_preds.npy` for testing set that you can submit to the [EvalAI leaderboard](https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347) to see the accuracy. The predicted file `test_preds.npy` contains [3, 1, 0, 2, ...] where `i`-th element represents the predicted label of i-th question with "id_string": "test_`i`" in test.json.
 
 
 ## Results
