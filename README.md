@@ -13,7 +13,7 @@ Then refer to [apex](https://github.com/NVIDIA/apex) to install Nvidia apex for 
 ```bash
 git clone https://github.com/yuweihao/reclor.git
 ```
-3. Get the dataset. Download the dataset from this [link](https://github.com/yuweihao/reclor/releases/download/v1/reclor_data.zip). The unzip password is `for_non-commercial_research_purpose_only`. Or you can use the following command to unzip the file:
+3. Get the dataset. Download the dataset from this [Download Link](https://github.com/yuweihao/reclor/releases/download/v1/reclor_data.zip). The unzip password is `for_non-commercial_research_purpose_only`. Or you can use the following command to unzip the file:
 
 ```
 mkdir reclor_data && unzip -P for_non-commercial_research_purpose_only -d reclor_data reclor_data.zip
