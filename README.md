@@ -13,7 +13,11 @@ Then refer to [apex](https://github.com/NVIDIA/apex) to install Nvidia apex for 
 ```bash
 git clone https://github.com/yuweihao/reclor.git
 ```
-3. Get the dataset. Please visit this [Google form link](https://docs.google.com/forms/d/e/1FAIpQLSe56wq5xIEGbDsgRN6P6lHr34jfv182AMuiIzjJXmVYCg39oA/viewform) to get the dataset. If you have trouble visiting Google from your area, you can alternatively visit this [Tencent form link](https://wj.qq.com/s2/5472244/fd55/). Then upzip the downloaded file in the main directory or other directory.
+3. Get the dataset. Download the dataset from this [link](https://github.com/yuweihao/reclor/releases/download/v1/reclor_data.zip). The unzip password is `for_non-commercial_research_purpose_only`. Or you can use the following command to unzip the file:
+
+```
+mkdir reclor_data && unzip -P for_non-commercial_research_purpose_only -d reclor_data reclor_data.zip
+```
 
 4. Run the scripts in the main directory by such as 
 ```bash
