@@ -53,3 +53,6 @@ If you could not obtain similar performance in your environment and device, mayb
         year = {2020}
 }
 ```
+
+## Acknowledgment
+Weihao Yu would like to thank TPU Research Cloud (TRC) program for the support of partial computational resources.
